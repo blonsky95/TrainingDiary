@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">TrainingApp</string>
+    <string name="title_main">Weekly Plan</string>
+
+    <string name="monday">MONDAY</string>
+    <string name="results">RESULTS</string>
+    <string name="tuesday">TUESDAY</string>
+    <string name="wednesday">WEDNESDAY</string>
+    <string name="thursday">THURSDAY</string>
+    <string name="friday">FRIDAY</string>
+    <string name="saturday">SATURDAY</string>
+    <string name="sunday">SUNDAY</string>
+    <string name="go">GO</string>
+    <string name="week">WEEK</string>
+    <string name="default_number">1</string>
+    <string name="clone">CLONE</string>
+    <string name="save_changes">SAVE CHANGES</string>
+    <string name="type_here_plan">Type plan here</string>
+    <string name="save_results">SAVE RESULTS</string>
+    <string name="results_">Results:</string>
+
+    <string name="edit">Edit</string>
+
+    <string name="displaying_week">week:</string>
+    <string name="send_plan">EXPORT</string>
+
+
+    <string name="editor_insert_item_successful">Item saved</string>
+
+    <string name="editor_insert_item_failed">Error with saving item</string>
+    <string name="help_text">Touch the different Training and Results text boxes to modify their content. Navigate through weeks to go to future and past weekly plans. </string>
+    <string name="confirmation_text">OK!</string>
+    <string name="spanish">Spanish</string>
+    <string name="english">English</string>
+    <string name="clone_request">Copy current week to:</string>
+    <string name="clone_confirm">Clone</string>
+    <string name="clone_cancel">Cancel</string>
+    <string name="clone_success">Week cloned succesfully</string>
+    <string name="clone_fail_1">Enter a number from 1 to 52</string>
+    <string name="clone_fail_2">Input has to be a digit/s</string>
+    <string name="week_update_fail_1">Maximum week number is 52</string>
+    <string name="week_update_fail_2">Week number starts from 1</string>
+
+
+
+</resources>

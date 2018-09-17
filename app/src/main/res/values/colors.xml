@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="listbg">#eb9ee9ec</color>
+    <color name="listbgalt">#e0c3f7f2</color>
+    <color name="planbg">#4ddeef</color>
+    <color name="checkbox">#30c3d4</color>
+
+
+
+</resources>

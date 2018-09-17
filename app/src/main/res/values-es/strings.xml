@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">TrainingApp</string>
+    <string name="title_main">Plan Semanal</string>
+
+    <string name="monday">LUNES</string>
+    <string name="results">RESULTADOS</string>
+    <string name="tuesday">MARTES</string>
+    <string name="wednesday">MIERCOLES</string>
+    <string name="thursday">JUEVES</string>
+    <string name="friday">VIERNES</string>
+    <string name="saturday">SABADO</string>
+    <string name="sunday">SUNDAY</string>
+    <string name="go">GO</string>
+    <string name="week">SEMANA</string>
+    <string name="default_number">1</string>
+    <string name="clone">CLONAR</string>
+    <string name="save_changes">GUARDAR CAMBIOS</string>
+    <string name="type_here_plan">Escribe aquí</string>
+    <string name="save_results">GUARDAR RESULTADOS</string>
+    <string name="results_">Resultados:</string>
+
+    <string name="edit">Editar</string>
+
+    <string name="displaying_week">SEMANA:</string>
+
+    <string name="editor_insert_item_successful">Guardado!</string>
+
+    <string name="editor_insert_item_failed">Error</string>
+    <string name="help_text">Toca los cuadros de texto correspondientes a Entrenamientos y resultados para editarlos. Cambia de semana para ver futuros planes o semanas ya hechas</string>
+    <string name="confirmation_text">OK!</string>
+    <string name="spanish">Españól</string>
+    <string name="english">Inglés</string>
+    <string name="clone_request">Clonar semana a:</string>
+    <string name="clone_confirm">Clonar</string>
+    <string name="clone_cancel">Cancelar</string>
+    <string name="clone_success">Semana clonada!</string>
+    <string name="clone_fail_1">Introduce un numero entre 1 y 52</string>
+    <string name="clone_fail_2">Use digitos solamente</string>
+    <string name="week_update_fail_1">Numero de semana no puede exceder 52 </string>
+    <string name="week_update_fail_2">Numero de semana empieza en 1</string>
+    <string name="send_plan">EXPORTAR</string>
+
+
+
+
+
+</resources>

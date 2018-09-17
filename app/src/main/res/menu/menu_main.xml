@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/english_language"
+        android:icon="@drawable/eng"
+        android:title="@string/english"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/spanish_language"
+        android:icon="@drawable/esp"
+        android:title="@string/spanish"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/help_button"
+        android:icon="@drawable/help_icon"
+        android:title="@string/default_number"
+        app:showAsAction="ifRoom" />
+</menu>

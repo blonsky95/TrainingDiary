@@ -3,19 +3,13 @@ package pabs.trainingapp1;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.BaseColumns;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import pabs.trainingapp1.data.PlanDbHelper;
 import pabs.trainingapp1.data.TrainingPlan.TrainingEntry;
 
 public class TrainingResults extends AppCompatActivity {
@@ -42,12 +36,11 @@ public class TrainingResults extends AppCompatActivity {
 
         Intent intent = getIntent();
         previous_plan = intent.getExtras().getString("previous_plan");
-   //     Log.e("PREVIOUS_PLAN", "IS: " + previous_plan);
+
         String day_identifier = String.valueOf(previous_plan.charAt(0));
         day_identifier_int = Integer.parseInt(day_identifier);
 
         week_identifier = previous_plan.substring(1, previous_plan.indexOf("zx0"));
-   //     Log.e("WEEK IDENTIFIER CHECK", "WEEK: " + week_identifier);
 
         week_identifier_int = Integer.parseInt(week_identifier);
 
@@ -118,8 +111,6 @@ public class TrainingResults extends AppCompatActivity {
             if (day_identifier_int == 7) {
                 values.put(TrainingEntry.COLUMN_RESULTS_SUNDAY, results_string);
             }
-
-
 
             getContentResolver().update(mCurrentWeekUri, values, null, null);
 

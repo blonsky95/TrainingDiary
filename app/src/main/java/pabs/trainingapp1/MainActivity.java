@@ -31,24 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
 import java.util.Locale;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.util.DisplayMetrics;
-import android.widget.Toolbar;
-
-import java.util.Locale;
-import java.util.Random;
 
 import pabs.trainingapp1.data.PlanDbHelper;
 import pabs.trainingapp1.data.TrainingPlan.TrainingEntry;
@@ -81,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static int weekNumber = 1;
 
-    private String textFileName;
-
     PlanDbHelper dbhelper = new PlanDbHelper(this);
 
     @Override
@@ -113,11 +94,8 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = db.query(TrainingEntry.TABLE_NAME, null, null, null, null, null, null);
         if (cursor.getCount() > 0) {
             Log.e(LOG_TAG, "DATABASE ISN'T EMPTY");
-            // read/query
         }
-        //int i=cursor.getColumnCount();
         else {
-            //create
             Log.e(LOG_TAG, "DATABASE IS EMPTY");
             createTable();
         }
@@ -125,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
         TextView export_btn = findViewById(R.id.export_btn);
         export_btn.setOnClickListener(export_data);
-
 
         TextView clonedata = findViewById(R.id.clonedatabtn);
 
@@ -326,22 +303,6 @@ public class MainActivity extends AppCompatActivity {
         return weekPlan;
     }
 
-//    private void createTextFile() throws IOException {
-//        File path = getApplicationContext().getExternalFilesDir(null);
-//        textFileName = "Week " + weekNumber + " training plan";
-//        File planTextFile = new File(path, textFileName);
-//        FileOutputStream textStream = new FileOutputStream(planTextFile);
-//        String output = planToTextConstruct();
-//        Log.e(LOG_TAG, String.valueOf(path));
-//        try {
-//            textStream.write(output.getBytes());
-//        } finally {
-//            Log.e(LOG_TAG,"TEXT FILE CREATED");
-//            textStream.close();
-//
-//        }
-//
-//    }
 
     private View.OnClickListener export_data = new View.OnClickListener() {
         @Override
@@ -357,12 +318,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendPlan() {
 
-//            try {
-//                createTextFile();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-
         String output = planToTextConstruct();
 
         Log.i("Send email", "");
@@ -372,14 +327,6 @@ public class MainActivity extends AppCompatActivity {
         emailIntent.setData(Uri.parse("mailo:"));
         emailIntent.setType("text/plain");
 
-        //     StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        //    StrictMode.setVmPolicy(builder.build());
-
-//            String filename=textFileName;
-//            File filelocation = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), filename);
-//            Uri path = Uri.fromFile(filelocation);
-
-        //      emailIntent.putExtra(Intent.EXTRA_STREAM, path);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Training plan week "+weekNumber);
         emailIntent.putExtra(Intent.EXTRA_TEXT, output);
 
@@ -400,7 +347,6 @@ public class MainActivity extends AppCompatActivity {
             weekNumber = Integer.parseInt(weeknumberTV.getText().toString());
             Log.e(LOG_TAG, "UI UPDATED, WEEK NUMBER: " + weekNumber);
             loadData();
-//          getLoaderManager().initLoader(ID_LOADER,null,MainActivity.this);
 
         }
     };
@@ -749,10 +695,6 @@ public class MainActivity extends AppCompatActivity {
     public static int dpToPx(int dp) {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
-
-//    public static int pxToDp(int px) {
-//        return (int) (px / Resources.getSystem().getDisplayMetrics().density);
-//    }
 
     private void cloneCurrentWeek(int weekToBeCloned) {
 

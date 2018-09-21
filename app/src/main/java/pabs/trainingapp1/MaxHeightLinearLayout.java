@@ -2,7 +2,6 @@ package pabs.trainingapp1;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.widget.ViewUtils;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 

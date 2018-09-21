@@ -39,7 +39,6 @@ public class TrainingEditor extends AppCompatActivity {
 
         Intent intent = getIntent();
         previous_plan = intent.getExtras().getString("previous_plan");
-        //       Log.e("PREVIOUS_PLAN", "IS: " + previous_plan);
         String day_identifier = String.valueOf(previous_plan.charAt(0));
         day_identifier_int = Integer.parseInt(day_identifier);
 
@@ -50,8 +49,6 @@ public class TrainingEditor extends AppCompatActivity {
 
         mCurrentWeekUri = ContentUris.withAppendedId(TrainingEntry.CONTENT_URI, week_identifier_int);
 
-
-        //      Log.e("CHEEECK", "display "+day_identifier);
         if (day_identifier_int == 1) {
             setTitle("EDIT MONDAY TRAINING");
 
@@ -91,7 +88,6 @@ public class TrainingEditor extends AppCompatActivity {
 
             EditText daily_training = findViewById(R.id.training_text);
             String training_string = daily_training.getText().toString();
-
 
             ContentValues values = new ContentValues();
 
